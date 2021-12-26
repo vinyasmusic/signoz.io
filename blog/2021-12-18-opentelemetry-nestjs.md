@@ -3,10 +3,16 @@ title: Monitoring your Nestjs application using OpenTelemetry
 slug: opentelemetry-nestjs
 date: 2021-12-18
 tags: [opentelemetry, javascript-monitoring]
-author: Ankit Anand
-author_title: SigNoz Team
-author_url: https://github.com/ankit01-oss
-author_image_url: https://avatars.githubusercontent.com/u/83692067?v=4
+authors:
+  - name: Ankit Anand
+    title: SigNoz Team
+    url: https://github.com/ankit01-oss
+    image_url: https://avatars.githubusercontent.com/u/83692067?v=4
+  - name: Vishal Sharma
+    title: SigNoz Team
+    url: https://github.com/makeavish
+    image_url: https://avatars.githubusercontent.com/u/9512100?v=4
+    
 description: OpenTelemetry is a vendor-agnostic isntrumentation library. In this article, learn how to set up monitoring for a Nestjs application using OpenTelemetry.
 image: /img/blog/2021/12/monitor_nestjs_cover.webp
 hide_table_of_contents: true
