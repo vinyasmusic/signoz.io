@@ -1,6 +1,7 @@
 ---
 id: troubleshooting
 title: Troubleshooting
+description: Learn how to address common errors
 ---
 
 import Tabs from "@theme/Tabs";

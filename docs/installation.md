@@ -1,5 +1,5 @@
 ---
-id: installation
+id: installation-old
 title: Installation Instructions
 ---
 
