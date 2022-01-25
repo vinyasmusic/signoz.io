@@ -2,7 +2,7 @@
 id: getting-started
 title: Getting Started
 sidebar_label: Getting Started
-slug: /
+slug: /getting-started
 ---
 
 SigNoz is an open-source Application Performance Monitoring(APM) tool. It helps you monitor applications and troubleshoot problems. With SigNoz, you can monitor metrics(both application and infrastructure), track user requests across services and set alerts on metrics.

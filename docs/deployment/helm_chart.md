@@ -1,5 +1,5 @@
 ---
-id: helm_chart
+id: helm_chart_old
 title: Deploy with Helm Charts
 ---
 ### Steps:
