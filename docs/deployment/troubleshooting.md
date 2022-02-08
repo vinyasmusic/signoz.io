@@ -44,27 +44,25 @@ b3afb9d3ac32   yandex/clickhouse-server                       "/entrypoint.sh"  
 4. Try reinstall SigNoz by first bringing down the existing containers & [reinstalling](#re-installing-signoz)
 
 :::info
+
 Wait for 2-3 mins for the data to be available to frontend. If you are running on local machine, checkout `http://localhost:3000`.
 You would want to open port 3000 to be accessible from outside world if you want to use public url of machine.
+
 :::
 
-<br></br>
+<p>&nbsp;</p>
 
 
-<!-- #### Troubleshooting of common issues for Kafka + Druid Setup
+### Troubleshooting repo
 
-1. `docker ps` will show all containers created by SigNoz. Check if `broker`, `otel-collector` and `historical` containers are running. They do not come up if there is a memory problem. You may want to increase alloted memory.
-2. If you are still facing issues, try re-running `./install.sh`. This will retry installing containers which failed the first time.
-3. Try reinstall SigNoz by first bringing down the existing containers by running
-   `sudo docker-compose -f docker/druid-kafka-setup/docker-compose-tiny.yaml down -v` and then running `./install.sh`
-4. If you are facing issues like `Request failed with status code 400` in frontend, then open `http://localhost:8888` or port 8888 on your IP .This is druid console. Check if **Datasource** named `flattened_spans` has come up. If there is no **Ingestion Supervsor** running, then run `./install.sh` again to bring them up.
-5. If you couldn't spot issues, feel free to join our [slack community](https://join.slack.com/t/signoz-community/shared_invite/zt-lrjknbbp-J_mI13rlw8pGF4EWBnorJA) or shoot an email at ankit@signoz.io. We are generally always there.
+Use the instructions in [this repo](https://github.com/SigNoz/troubleshoot) to test if SigNoz otel collector is accessible from where you are running your applications
 
-<br></br> -->
+<p>&nbsp;</p>
+
 
 ### Re-installing SigNoz
 
-1. For v0.5.1 (Released on 2 Dec 2021) and later 
+1. Shut down currently running containers with the following command:
 
 <Tabs
   defaultValue="x86"
@@ -91,7 +89,8 @@ You would want to open port 3000 to be accessible from outside world if you want
 
 2. `./install.sh`
 
-<!-- #### Kafka+Druid setup
+<p>&nbsp;</p>
 
-1. `sudo docker-compose -f docker/druid-kafka-setup/docker-compose.yaml down -v`
-2. `./install.sh` -->
+
+
+
