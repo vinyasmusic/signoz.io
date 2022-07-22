@@ -2,11 +2,13 @@
 title:  How InstaSafe chose SigNoz over Grafana and Elastic APM to power their observability needs
 slug: instasafe
 image: /img/case_study/instasafe-banner.png
+authors: [pranay]
+
 ---
 
 # How InstaSafe chose SigNoz over Grafana and Elastic APM to power their observability needs
 
-*I sat down with Bhaswanth, Software Architect at <a href = "https://instasafe.com" rel="noopener noreferrer nofollow" target="_blank" >InstaSafe</a> to understand how they use SigNoz at InstaSafe. Here’s a few snippets from our conversation (edited for legibility)*
+*We sat down with Bhaswanth, Software Architect at <a href = "https://instasafe.com" rel="noopener noreferrer nofollow" target="_blank" >InstaSafe</a> to understand how they use SigNoz at InstaSafe. Here’s a few snippets from our conversation (edited for legibility)*
 
 ![Instsafe Case Study](/img/case_study/instasafe-banner.png)
 
