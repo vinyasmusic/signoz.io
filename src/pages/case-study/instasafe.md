@@ -1,18 +1,15 @@
 ---
 title:  How InstaSafe chose SigNoz over Grafana and Elastic APM to power their observability needs
 slug: instasafe
+image: /img/case_study/instasafe-banner.png
 ---
 
 # How InstaSafe chose SigNoz over Grafana and Elastic APM to power their observability needs
 
-*I sat down with Bhaswanth, Architect at [InstaSafe](https://instasafe.com/) to understand how they use SigNoz at InstaSafe.. Here’s a few snippets from our conversation (edited for legibility)*
+*I sat down with Bhaswanth, Software Architect at <a href = "https://instasafe.com" rel="noopener noreferrer nofollow" target="_blank" >InstaSafe</a> to understand how they use SigNoz at InstaSafe. Here’s a few snippets from our conversation (edited for legibility)*
 
-<figure data-zoomable align='center'>
-    <img src="/img/case_study/instasafe-sc-traces.png" alt="InstaSafe Traces"/>
-    <figcaption><i> Instasafe uses traces extensively to solve performance issues</i></figcaption>
-</figure>
+![Instsafe Case Study](/img/case_study/instasafe-banner.png)
 
-<br /><br />
 
 ### *Can you share about what does Instasafe do? What are your key products?*
 
@@ -31,6 +28,14 @@ Bhaswanth says “For large sites, availability is very important because their 
 “We observed that some of our APIs, they take a lot of time to process. We could not figure out why. Because when we test in our own environment everything seems fine. But we don't do it at scale of the customers, right”
 
 And what is the P99 latency? Such things. We didn't know how our applications did on such metrics before.”
+<br />
+
+<figure data-zoomable align='center'>
+    <img src="/img/case_study/instasafe-sc-traces.png" alt="InstaSafe Traces"/>
+    <figcaption><i> Instasafe uses traces extensively to solve performance issues</i></figcaption>
+</figure>
+
+<br /><br />
 
 ### *What tools did you try before moving to SigNoz?*
 
