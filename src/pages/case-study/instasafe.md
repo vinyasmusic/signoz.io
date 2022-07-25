@@ -6,24 +6,51 @@ authors: [pranay]
 
 ---
 
-# How InstaSafe chose SigNoz over Grafana and Elastic APM to power their observability needs
+# How InstaSafe chose SigNoz over Grafana and Elastic APM to scale to power their observability needs
 
-*We sat down with Bhaswanth, Software Architect at <a href = "https://instasafe.com" rel="noopener noreferrer nofollow" target="_blank" >InstaSafe</a> to understand how they use SigNoz at InstaSafe. Here’s a few snippets from our conversation (edited for legibility)*
+<div class="avatar">
+  <a
+    class="avatar__photo-link avatar__photo avatar__photo--lg"
+    href="https://twitter.com/pranay01">
+    <img
+      alt="Pranay Profile"
+      src="/img/authors/pranay_profile_pic.webp" />
+  </a>
+  <div class="avatar__intro">
+    <div class="avatar__name">Pranay Prateek</div>
+    <small class="avatar__subtitle">
+      Maintainer, SigNoz
+    </small>
+  </div>
+</div>
+
+<br />
+<br />
+
+
+*I sat down with Bhaswanth, Software Architect at <a href = "https://instasafe.com" rel="noopener noreferrer nofollow" target="_blank" >InstaSafe</a> to understand how they use SigNoz at InstaSafe. Here’s a few snippets from our conversation (edited for legibility)*
 
 ![Instsafe Case Study](/img/case_study/instasafe-banner.png)
 
 
+![Instsafe Numbers](/img/case_study/instasafe-numbers.svg)
+
+
 ### *Can you share about what does Instasafe do? What are your key products?*
 
-Instasafe provides Zero Trust Application and Network access products for remote teams. With users from around 40 countries creating around 100,000 authenticated sessions per day, uptime is very important for them.
+Instasafe provides Zero Trust Application and Network access products for remote teams. With users from around 40 countries creating around 100,000 authenticated sessions per day, uptime is very important for us.
 
 With huge number of teams suddenly moving to working remotely, Instasafe experienced a surge in demand which amplified the need for a good observability setup.
 
+
+
 ### *Why is high uptime important to Instasafe?*
 
-Availability of InstaSafe platform is critically important as their customers ability to do business depends on InstaSafe’s connectivity. Maintaining an uptime of 99.99 or 5 nines is important to them.
+Availability of InstaSafe platform is critically important as our customers ability to do business depends on InstaSafe’s connectivity. Maintaining an uptime of 99.99 or 5 nines is important to us.
 
-Bhaswanth says “For large sites, availability is very important because their applications are dependent on our connectivity.”
+Bhaswanth says “For large sites, availability is very important because our customers' applications are dependent on our connectivity.”
+
+
 
 ### *What are your key use cases in Observability*
 
