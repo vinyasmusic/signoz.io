@@ -7,8 +7,8 @@ slug: instasafe
 
 <head>
   <link rel="canonical" href="https://signoz.io/case-study/instasafe/"/>
-  <meta property="og:image" content="https://signoz.io/img/case_study/instasafe-banner.webp"/>
-  <meta name ="twitter:image" content="https://signoz.io/img/case_study/instasafe-banner.webp"/>
+  <meta property="og:image" content="https://signoz.io/img/case_study/instasafe-banner.png"/>
+  <meta name ="twitter:image" content="https://signoz.io/img/case_study/instasafe-banner.png"/>
 </head>
 
 <div class="avatar">
@@ -33,10 +33,10 @@ slug: instasafe
 
 *I sat down with Bhaswanth, Software Architect at <a href = "https://instasafe.com" rel="noopener noreferrer nofollow" target="_blank" >InstaSafe</a> to understand how they use SigNoz at InstaSafe. Here’s a few snippets from our conversation (edited for legibility)*
 
-![Instsafe Case Study](/img/case_study/instasafe-banner.webp)
+![Instsafe Case Study](/img/case_study/instasafe-banner.png)
 
 
-![Instsafe Numbers](/img/case_study/instasafe-numbers.webp)
+![Instsafe Numbers](/img/case_study/instasafe-numbers.png)
 
 
 ### *Can you share about what does Instasafe do? What are your key products?*
@@ -63,7 +63,7 @@ And what is the P99 latency? Such things. We didn't know how our applications di
 <br />
 
 <figure data-zoomable align='center'>
-    <img src="/img/case_study/instasafe-sc-traces.webp" alt="InstaSafe Traces"/>
+    <img src="/img/case_study/instasafe-sc-traces.png" alt="InstaSafe Traces"/>
     <figcaption><i> Instasafe uses traces extensively to solve performance issues</i></figcaption>
 </figure>
 
@@ -82,7 +82,7 @@ How much ever resources we had ELK was eating up all of it and was very slow. It
 <br />
 
 <figure data-zoomable align='center'>
-    <img src="/img/case_study/instasafe-trace-filter.webp" alt="InstaSafe Trace Filter"/>
+    <img src="/img/case_study/instasafe-trace-filter.png" alt="InstaSafe Trace Filter"/>
     <figcaption><i> Filter the right traces to focus on</i></figcaption>
 </figure>
 
@@ -90,7 +90,7 @@ How much ever resources we had ELK was eating up all of it and was very slow. It
 
 
 <figure data-zoomable align='center'>
-    <img src="/img/case_study/instasafe-sc-exceptions.webp" alt="InstaSafe Exceptions"/>
+    <img src="/img/case_study/instasafe-sc-exceptions.png" alt="InstaSafe Exceptions"/>
     <figcaption><i> Exceptions page will all exceptions in a single view</i></figcaption>
 </figure>
 
@@ -108,3 +108,8 @@ So I was able to run a script and then configure everything.”
 “I think one mistake, which I have done in that past is - that when we look at a platform we want to use all its feature rather than thinking what problem is it solving for us. If we start collecting data for something which we don’t need now, but may be in the future - it might just add more load to the system, without giving us any benefit today - and may lead to bottlenecks.” 
 
 So, I would suggest to understand what data do you need today - and only send that data to the platform.
+
+-----
+Get started with SigNoz to improve observability of your applications. Check out our Github repo👇
+
+[![SigNoz GitHub repo](/img/blog/common/signoz_github.webp)](https://github.com/SigNoz/signoz)
