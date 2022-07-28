@@ -134,3 +134,25 @@ Flags:
 - `-dropOldTable` : If it is set to true then the old tables will be dropped after data migration is successful `default=true`
 - `-service` : If you want to restart the migration starting with the service after it has failed specify the service name with -service. `default=""`
 - `-timeNano` : Timestamp in nano after which the migration needs to be restarted. `default=""`
+- `-batchSize` : Batch size of the reading/writing to clickhouse as part of migration. `default="70000"`
+
+:::info
+**Recommended batch size:** Larger batch size leads to faster migration. But large batch size requires more memory. On average 1 row takes around 1.5 KBytes uncompressed data. So 70,000 rows uses around ~105 MBytes of data storage. So if you are migrating large data then you should use a larger batch size based on available memory on clickhouse and migration pods.
+Average row size varies for each system, so you should check the average row size of your system and use a proper batch size.
+To get the average row size of your table, you can use the following command after connecting to clickhouse:
+
+``` sql
+SELECT
+    database,
+    table,
+    formatReadableSize(sum(data_uncompressed_bytes) AS usize) AS uncompressed, 
+    sum(rows) AS total_rows,
+    formatReadableSize(usize/sum(rows)) AS avg_rows_size
+FROM system.parts
+WHERE (active = 1) AND (database LIKE 'signoz_traces') AND (table LIKE 'signoz_error_index_v2')
+GROUP BY
+    database,
+    table;
+```
+
+:::
