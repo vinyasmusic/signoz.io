@@ -6,7 +6,7 @@ sidebar_label: Upgrade to 0.10
 
 # Upgrade to 0.10 from earlier versions
 
-v0.10 is a breaking release which requires data migration, if you are upgrading from an older version then you have to run the data migration scripts to be able to see past data.
+v0.10 is a breaking release which requires data migration for errors and exceptions section, if you are upgrading from an older version then you have to run the data migration scripts to be able to see past errors and exceptions data.
 
 ## First upgrade to 0.10
 
