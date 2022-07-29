@@ -120,6 +120,13 @@ In case of failure and have to run again, make sure to cleanup the pod before ru
 kubectl -n platform delete pod signoz-migrate
 ```
 
+## In case of failure
+
+1. Note the `ServiceName: xxxxx` and `TimeNano: xxxxx` in the logs of the migration script
+2. Check the recommneded batch size section at the end of this page and use a runtime flag if needed
+3. Re-run migration command using flags `service` and `timeNano` and `batchSize` with values from above as mentioned in the `CLI Flags` section below
+4. Reach out to us at [slack](https://join.slack.com/t/signoz-community/shared_invite/zt-lrjknbbp-J_mI13rlw8pGF4EWBnorJA)
+
 ## CLI Flags
 
 There are some custom flags which can be enabled based on different usecases.
