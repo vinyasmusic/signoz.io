@@ -149,7 +149,7 @@ SELECT
     sum(rows) AS total_rows,
     formatReadableSize(usize/sum(rows)) AS avg_rows_size
 FROM system.parts
-WHERE (active = 1) AND (database LIKE 'signoz_traces') AND (table LIKE 'signoz_error_index_v2')
+WHERE (active = 1) AND (database LIKE 'signoz_traces') AND (table LIKE 'signoz_error_index')
 GROUP BY
     database,
     table;
