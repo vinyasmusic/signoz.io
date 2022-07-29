@@ -139,7 +139,7 @@ Flags:
 :::info
 **Recommended batch size:** Larger batch size leads to faster migration. But large batch size requires more memory. On average 1 row takes around 1.5 KBytes uncompressed data. So 70,000 rows uses around ~105 MBytes of data storage. So if you are migrating large data then you should use a larger batch size based on available memory on clickhouse and migration pods.
 Average row size varies for each system, so you should check the average row size of your system and use a proper batch size.
-To get the average row size of your table, you can use the following command after connecting to clickhouse:
+To get the average row size of your table, you can use the following command after [connecting to clickhouse](https://signoz.io/docs/operate/clickhouse/connect-to-clickhouse/):
 
 ``` sql
 SELECT
