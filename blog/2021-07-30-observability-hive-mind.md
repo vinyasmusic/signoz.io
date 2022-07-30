@@ -73,6 +73,8 @@ Here's a [blog](https://www.honeycomb.io/blog/why-observability-requires-distrib
 
 Currently people think of observability systems as a dashboard which they can use to monitor different dials, like while driving a car. But observability tools can be much more powerful answering specific questions you may have about your infrastructure and applications. Think more Alexa, rather than dashboards.
 
+![dashboard-or-alexa.png](/img/blog/2022/07/dashboard-or-alexa.png)
+
 - Feature in Honeycomb book
 
 Would love to hear about how your experience has been
