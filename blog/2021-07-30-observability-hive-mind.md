@@ -5,7 +5,7 @@ date: 2022-07-30
 tags: [Observability]
 authors: [pranay]
 description: Not 3 pillars but a single whole to help customers solve issues faster
-image: /img/blog/2022/07/redis_monitoring_opentelemetry_signoz.webp
+image: /img/blog/2022/07/o11y-hivemind-trans.png
 keywords:
   - observability
 ---
@@ -24,11 +24,14 @@ But wait a minute, why are there only 3 pillars and does it really matter to the
 
 At the end of the day, users are just trying to solve their problems fast.
 
-Their payment service is throwing errors and customers are not able to start using their service. The customer success team is breathing down their neck to know when this problem will be resolved. Do you think the engineer is thinking about - okay what are the 3 pillars - let me check pillar 1, pillar 2 and pillar 3 and see what do they give me
+Their payment service is throwing errors and customers are not able to start using their service. The customer success team is breathing down their neck to know when this problem will be resolved. Do you think the engineer is thinking about - okay what are the 3 pillars - let me check pillar 1, pillar 2 and pillar 3 and see what do they give me.
+
 
 My guess is, No
 
 They just care about their problem being solved. and FAST.
+
+### Can you just solve my problem 
 
 Like any other tool, observability tool also solves a problem and the one of the main problem it solves is - if something is going wrong, can I find what it is and then fix it fast. 
 
@@ -39,6 +42,8 @@ Modern engineering systems are complex and involve many moving components. Findi
 And in our view solving such complex problems need correlation across different signals. 
 
 Ok, so you find in your trace graph that an operation is taking more time. What could be the reason for that - is the VM’s CPU getting saturated? Or are there some logs by that service which show that there was a mutex locking problem. You want to see everything in context.
+
+### A better model for observability
 
 That is why at SigNoz, we don’t believe in pillars or silos. There are just different signals which you want to see in a correlated way in context to figure out whats the problem quickly.
 
@@ -52,6 +57,7 @@ Also, we have chosen columnar databases as our main workhorse as we think observ
 
 You first want to find - Ok, show me p99 latency graphs by service. then you would find Ok a particular service is showing higher latency. Then you would add some filters around specific APIs or status codes which may be causing this - and narrow down on the problem.
 
+### Single App and Columnar Databases
 This would  needs lots of slicing and dicing, group bys, counts - and this is where columnar databases shine.
 
 Recenly, Uber also moved from Elastic to ClickHouse as their database for their logs infra because they found that 60-70% of their logs queries were aggregation queries and columnar databases are designed for such queries and perform much faster
@@ -61,8 +67,12 @@ At SigNoz, we think a lot about how to provide insights faster to users and our 
 - Single app for all telemetry signals
 - Powerful aggregation and correlation capabilities
 
-### Honeycomb article reference
+Here's a [blog](https://www.honeycomb.io/blog/why-observability-requires-distributed-column-store/) by Honeycomb where they talk in detail about why columnar databases are more suited for observability. They focus primarily on tracing and high cardinality but the point around being able to ask questions from your observability system broadly holds.
 
-### Feature in Honeycomb book
+### Dashboards or Alexa?
+
+Currently people think of observability systems as a dashboard which they can use to monitor different dials, like while driving a car. But observability tools can be much more powerful answering specific questions you may have about your infrastructure and applications. Think more Alexa, rather than dashboards.
+
+- Feature in Honeycomb book
 
 Would love to hear about how your experience has been
