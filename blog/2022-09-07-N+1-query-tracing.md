@@ -1,10 +1,36 @@
-# What is N+1 query problem and how distributed tracing solves it?
+---
+title: What is N+1 query problem and how distributed tracing solves it?
+slug: N+1-query-distributed-tracing
+date: 2022-09-06
+tags: [Distributed Tracing]
+authors: pranay
+description: N+1 query problem is a problem in database retrieval where the related entities of an object are queried individually from a database, leading to O(n) queries
+image: /img/blog/2022/09/n_plus_cover.webp
+hide_table_of_contents: false
+keywords:
+ - N+1 query problem
+ - performance
+ - distributed tracing
+ - database retrieval
+---
+
+<head>
+  <link rel="canonical" href="https://signoz.io/blog/N+1-query-distributed-tracing/"/>
+</head>
 
 N+1 query problem is a problem in database retrieval where the related entities of an object are queried individually from a database, leading to O(n) queries where n is the number of related entities of the object.
 
 Mouthful of words, I agree 🙂 
 
 Let’s take an example to illustrate what does it mean.
+
+<!--truncate-->
+## What is N+1 query problem?
+
+![Cover Image](/img/blog/2022/09/n_plus_cover.webp)
+
+<br></br>
+
 
 Let's say you have a collection of `team` objects (database rows), and each `team`
 has a collection of `members` objects (also rows). In other words, `team` → `members`
@@ -24,17 +50,22 @@ Now, if there are N teams, you can see why this would lead to N+1 database queri
 
 Playing it out, this would issue queries like
 
-`SELECT * from teams WHERE …` 
+```
 
-`SELECT * from members where teamID = 1`
+SELECT * from teams WHERE … 
 
-`SELECT * from members where teamID = 2`
+SELECT * from members where teamID = 1
 
-`SELECT * from members where teamID = 3`
+SELECT * from members where teamID = 2
 
-`SELECT * from members where teamID = 4`
+SELECT * from members where teamID = 3
+
+SELECT * from members where teamID = 4
 
 …
+
+```
+
 
 This is sub-optimal.
 
@@ -64,15 +95,38 @@ So, what do you do?
 
 This is where distributed tracing really comes in handy.
 
+## What is Distributed tracing & how it can be helpful
+
 For those who have not heard about it, distributed tracing is a method to track user requests in their entirety as it travels across components of a distributed system. You can check more details about it [here](https://signoz.io/distributed-tracing/)
 
-![tracing-signoz.webp](/img/blog/2022/09//tracing-signoz.webp)
+<figure data-zoomable align='center'>
+    <img src="/img/blog/2022/09/tracing-signoz.webp" alt="tracing signoz"/>
+    <figcaption><i>How a distributed trace of a request looks like</i></figcaption>
+</figure>
+
+<br></br>
 
 So, if you have distributed tracing implemented in your services and there are traces which are taking a long time, you can just filter based on that and try seeing the calling patterns of these requests which are taking a lot of time
 
-![np1-calls.png](/img/blog/2022/09/np1-calls.png)
+
+<figure data-zoomable align='center'>
+    <img src="/img/blog/2022/09/np1-calls.png" alt="tracing signoz n+1"/>
+    <figcaption><i>Easy to identiy N+1 queries in a distributed trace graph</i></figcaption>
+</figure>
+
+<br></br>
 
 Once you see a pattern like above, where single request is fanning out multiple database requests, you know there is an issue of N+1 queries. You can head into your codebase and try to figure out where this is in originating from. As you can see in the above screenshot, a single request is leading to 11000+ database calls which is clearly a case of N+1 queries being made.
+
+
+<figure data-zoomable align='center'>
+    <img src="/img/blog/2022/09/n_plus_1.webp" alt="N+1 query "/>
+    <figcaption><i>N+1 queries are suboptimal and can lead to significant perf impact</i></figcaption>
+</figure>
+
+<br></br>
+
+### Why just logs may not be able to help you identify such issues
 
 You may ask, can’t logs help me solve this? If I log each database call 🤔
 
@@ -83,3 +137,17 @@ Logs may give you details about each DB call, but they don’t have they exact h
 Just to share an example, one of users of SigNoz recently shared with us that they were able to detect such N+1 query issues in their code which led to reducing execution time for certain APIs from 180 s to 2s. 
 
 A 90x improvement in performance 🤯
+
+<br></br>
+
+If you are thinking of trying out distributed tracing and finding such issues, check out our Github repo
+
+[![SigNoz GitHub repo](/img/blog/common/signoz_github.webp)](https://github.com/SigNoz/signoz)
+
+---
+
+## Further Reading
+
+[SigNoz - an open source alternative to DataDog](https://signoz.io/blog/open-source-datadog-alternative/)
+
+[Redis Monitoring with OpenTelemetry and SigNoz](https://signoz.io/blog/redis-opentelemetry/)
