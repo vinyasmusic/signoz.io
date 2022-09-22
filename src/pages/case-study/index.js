@@ -67,7 +67,7 @@ function caseStudies() {
                       </div>
                   </div>
               </div>
-              {/* <div className={"col col--6 margin-vert--md"}>
+              <div className={"col col--6 margin-vert--md"}>
                   <div class="card">
                       <div class="card__header">
                           <h3>Outplay</h3>
@@ -88,7 +88,7 @@ function caseStudies() {
                       <a class="button button--primary" href="/case-study/outplay/" >Read more</a>
                       </div>
                   </div>
-              </div> */}
+              </div>
           </div>
         </div>  
         </section>
