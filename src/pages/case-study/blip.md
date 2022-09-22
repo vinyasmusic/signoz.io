@@ -1,7 +1,7 @@
 ---
 title:  How Blip uses SigNoz to improve their issue resolution time by 14x
 slug: blipbillboards
-image: /img/case_study/BlipBillBoards.webp
+image: /img/case_study/BlipBillBoards.png
 authors: [pranay]
 hide_table_of_contents: true
 
@@ -37,7 +37,7 @@ Blip provides self-service subscription-based digital ad space across 1000’s o
 
 <!-- *I sat down with Nate, Senior DevOps engineer at [BlipBillBoards](https://www.blipbillboards.com/) to understand how they use SigNoz at BlipBillBoards. Here’s a few snippets from our conversation (edited for legibility)* -->
 
-![BlipBillBoards](/img/case_study/BlipBillBoards.webp)
+![BlipBillBoards](/img/case_study/BlipBillBoards.png)
 
 Blip used SigNoz to improve their issue resolution time by 14x. We sat down with Nate Bohman, Senior DevOps Engineer at Blip, to understand how they are using SigNoz to improve their observability. Some of the key points that the team liked about SigNoz:
 
