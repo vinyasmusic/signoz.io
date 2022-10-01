@@ -190,6 +190,7 @@ module.exports = {
                 'userguide/collect_docker_logs',
                 'userguide/collecting_syslogs',
                 'userguide/collect_logs_from_file',
+                'userguide/collecting_nodejs_winston_logs',
                 {
                   type: 'category',
                   label: 'Collecting Application Logs Using OTEL SDK',
@@ -242,7 +243,8 @@ module.exports = {
         'tutorial/mongodb-metrics',
         'tutorial/instrumenting-angular-frontend',
         'tutorial/s3-integration-iam-role-eks',
-        'tutorial/opentelemetry-operator-usage'
+        'tutorial/opentelemetry-operator-usage',
+        'tutorial/opentelemetry-binary-usage-in-virtual-machine'
       ],
     },
     {
