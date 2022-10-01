@@ -74,7 +74,7 @@ function caseStudies() {
                       </div>
                       <div class="card__image">
                         <img
-                            src="/img/case_study/Instasafe-summary.png"
+                            src="/img/case_study/outplay-list.webp"
                             alt="Image alt text"
                             title="Logo Title Text 1" />
                       </div>

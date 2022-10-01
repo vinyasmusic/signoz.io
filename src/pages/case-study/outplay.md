@@ -1,18 +1,18 @@
 ---
-title:  How InstaSafe chose SigNoz over Grafana and Elastic APM to power their observability needs
+title:  How Outplay uses SigNoz to improve their backend API response time by 35%
 slug: outplay
-image: /img/case_study/instasafe-banner.png
+image: /img/case_study/outplay-banner.webp
 authors: [pranay]
 
 ---
 import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 
-# How InstaSafe chose SigNoz over Grafana and Elastic APM to power their observability needs
+# How Outplay uses SigNoz to improve their backend API response time by 35%
 
 <head>
   <link rel="canonical" href="https://signoz.io/case-study/outplay/"/>
-  <meta property="og:image" content="https://signoz.io/img/case_study/instasafe-banner.png"/>
-  <meta name ="twitter:image" content="https://signoz.io/img/case_study/instasafe-banner.png"/>
+  <meta property="og:image" content="https://signoz.io/img/case_study/outplay-banner.webp"/>
+  <meta name ="twitter:image" content="https://signoz.io/img/case_study/outplay-banner.webp"/>
 
 </head>
 
@@ -36,9 +36,9 @@ import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 <br />
 
 
-*I sat down with Vijay, Technical Lead  at <a href = "https://outplayhq.com" rel="noopener noreferrer nofollow" target="_blank" >InstaSafe</a> to understand how they use SigNoz at Outplay. Here’s a few snippets from our conversation (edited for legibility)*
+*I sat down with Vijay, Technical Lead  at <a href = "https://outplayhq.com" rel="noopener noreferrer nofollow" target="_blank" >Outplay</a> to understand how they use SigNoz at Outplay. Here’s a few snippets from our conversation (edited for legibility)*
 
-<!-- ![Outplay Case Study](/img/case_study/outplay-banner.png) -->
+![Outplay Case Study](/img/case_study/outplay-banner.webp)
 
 ### What were the business problems you were trying to solve with SigNoz?
 Before introducing APM, we had blind spots. Our customers were seeing certain pages getting slow or having time outs sometimes. We didn’t have a great understanding of what was causing the slowness in application.
@@ -57,7 +57,7 @@ Outplay is used by salespeople who use it regularly to connect with their prospe
 
 ### How did SigNoz help?
 We migrated our entire workload from EC2 to Kubernetes, so that scaling would be easier. Then we started optimising the backend, that's when SigNoz helped us. We started getting a list of APIs and database call times which we started optimising. We are able to load more users now with the same infra and the backend response time is 35% faster. We handle peak load 3000 active concurrent connections currently.
-Generating traces for background services and DB calls to understand and improve their services. Also, track all the DB call traces from background workers to check for potential bottlenecks.s
+Generating traces for background services and DB calls to understand and improve their services. Also, track all the DB call traces from background workers to check for potential bottlenecks.
 We use traces in the dev and staging environment to find any performance issues. The QA team also uses APM tools in the staging environment to check if any APIs are taking a lot of time or finding any anomalies.
 
 <br />
@@ -66,18 +66,12 @@ We use traces in the dev and staging environment to find any performance issues.
 <br />
 
 ### Why did you choose SigNoz over other solutions?
-(needs editing)
 
-We were also checking out another tool. I think Grafana has something called Tempo. The number of components inside Tempo is huge.
+We were also checking out another tool, Tempo from Grafana. But the number of components inside Tempo is huge.
 
+We wanted to keep the number of components as small as possible. We don't want to deploy a lot of components, increase the complexity, because managing systems with many moving parts can be messy. You would need separate people to handle the issues in maintaining such systems.
 
-We wanted to keep as much lower as possible. We don't want to deploy a lot of components, increase the complexity, because managing such I'm.
-
-
-The application would become a mess. I mean, you need separate people to handle these kind of persons. So we wanted a tool to be as simple as possible.
-
-
-We deploy and we should forget so that the team continuously works.
+We needed something which just works after deploying and doesn't need continuous maintenance.
 <br />
 <br />
 
