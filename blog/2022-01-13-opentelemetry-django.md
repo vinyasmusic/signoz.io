@@ -2,7 +2,7 @@
 title: Monitoring Django application performance with OpenTelemetry
 slug: opentelemetry-django
 date: 2022-01-13
-tags: [opentelemetry, python-monitoring]
+tags: [OpenTelemetry Instrumentation, Python]
 authors: [ankit_anand, ankit_nayan]
 description: OpenTelemetry provides an open-source standard with a consistent collection mechanism and data format. In this article, learn how to set up monitoring for a Django application using OpenTelemetry.
 image: /img/blog/2022/01/opentelemetry_django_cover.webp
@@ -17,6 +17,9 @@ keywords:
   - django instrumentation
   - signoz
 ---
+
+import { LiteYoutubeEmbed } from "react-lite-yt-embed";
+
 <head>
   <link rel="canonical" href="https://signoz.io/blog/opentelemetry-django/"/>
 </head>
@@ -66,7 +69,7 @@ First, you need to install SigNoz. Data collected by OpenTelemetry will be sent 
 You can get started with SigNoz using just three commands at your terminal.
 
 ``` jsx
-git clone https://github.com/SigNoz/signoz.git
+git clone -b main https://github.com/SigNoz/signoz.git
 cd signoz/deploy/
 ./install.sh
 ```
@@ -75,7 +78,7 @@ The above instruction is for MacOS and linux distributions. For detailed instruc
 
 [![Deployment Docs](/img/blog/common/deploy_docker_documentation.webp)](https://signoz.io/docs/deployment/docker/?utm_source=blog&utm_medium=opentelemetry_django)
 
-If you have installed SigNoz on your local host, you can access the UI at: [http://localhost:3000](http://localhost:3000/application)
+If you have installed SigNoz on your local host, you can access the UI at: [http://localhost:3301](http://localhost:3301/application)
 
 The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the SigNoz installation package.
 
@@ -166,7 +169,7 @@ Download the <a href = "https://www.python.org/downloads/" rel="noopener norefer
       
       You can check if your app by opening the admin panel at [http://localhost:8000/admin](http://localhost:8000/admin).
       
-      If you have installed SigNoz on your local host, then you can access the SigNoz dashboard at [http://localhost:3000](http://localhost:3000/) to monitor your Django app for performance metrics.
+      If you have installed SigNoz on your local host, then you can access the SigNoz dashboard at [http://localhost:3301](http://localhost:3301/) to monitor your Django app for performance metrics.
       
       You need to generate some load on your app so that there is data to be captured by OpenTelemetry. Try adding a few questions in the polls app and play around.
 
@@ -209,7 +212,7 @@ django-app:
 6. **Browsing the app and checking data with SigNoz**<br></br>
    a. Visit [http://localhost:8000/admin](http://localhost:8000/admin) and create a question for poll<br></br>
    b. Then visit the list of polls at [http://localhost:8000/polls/](http://localhost:8000/polls/) and explore the polls<br></br>
-   c. The data should be visible now in SigNoz at `http://<IP of SigNoz>:3000`<br></br>
+   c. The data should be visible now in SigNoz at `http://<IP of SigNoz>:3301`<br></br>
 
 
 ### Open-source tool to visualize telemetry data
@@ -266,9 +269,18 @@ OpenTelemetry makes it very convenient to instrument your Django application. Yo
 You can try out SigNoz by visiting its GitHub repo 👇
 [![SigNoz GitHub repo](/img/blog/common/signoz_github.webp)](https://github.com/SigNoz/signoz)
 
-If you have any questions or need any help in setting things up, join our slack community and ping us in `#help` channel.
+If you are someone who understands more from video, then you can watch the below video tutorial on the same with SigNoz.
 
-[![SigNoz Slack community](/img/blog/common/join_slack_cta.png)](https://bit.ly/signoz-slack)
+<p>&nbsp;</p>
+
+<LiteYoutubeEmbed id="fmDLpaF1xFc" mute={false} />
+
+<p>&nbsp;</p>
+
+
+If you have any questions or need any help in setting things up, join our slack community and ping us in `#support` channel.
+
+[![SigNoz Slack community](/img/blog/common/join_slack_cta.png)](https://signoz.io/slack)
 
 ---
 

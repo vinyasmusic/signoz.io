@@ -2,7 +2,7 @@
 title: Jaeger and OpenTracing - Key concepts, use-cases and alternatives
 slug: jaeger-vs-opentracing
 date: 2021-09-08
-tags: [jaeger, apm-tools]
+tags: [Tools Comparison, Jaeger]
 authors: ankit_anand
 description: Jaeger and OpenTracing are both open-source projects aimed to solve pain-points of distributed tracing. But the scope of the projects are completely different. While Jaeger is an end-to-end distributed tracing tool..
 image: /img/blog/2021/09/jaeger_vs_opentracing_cover-min-2.webp
@@ -97,7 +97,7 @@ As already mentioned, OpenTracing merged with OpenCensus into a single project c
 
 The data collected with OpenTelemetry can also be sent to Jaeger's backend. But Jaeger is limited in terms of its UI and does only distributed tracing. For a robust monitoring and observability framework, you need a unified UI for both metrics and traces. And that's where SigNoz is far [more suited](https://signoz.io/blog/jaeger-vs-signoz/) than Jaeger as a distributed tracing tool.
 
-SigNoz is a full-stack open-source application performance monitoring and observability tool which can be used in place of Jaeger. SigNoz is built to support OpenTelemetry natively. It also provides users flexibility in terms of storage. You can choose between ClickHouse or Kafka + Druid as your backend storage while installing SigNoz.
+SigNoz is a full-stack open-source application performance monitoring and observability tool which can be used in place of Jaeger. SigNoz is built to support OpenTelemetry natively. It provides a fast OLAP datastore, ClickHouse as the storage backend.
 
 <Screenshot
     alt="Architecture of SigNoz with OpenTelemetry and ClickHouse"

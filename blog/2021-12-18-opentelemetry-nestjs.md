@@ -1,8 +1,8 @@
 ---
 title: Monitoring your Nestjs application using OpenTelemetry
 slug: opentelemetry-nestjs
-date: 2021-12-18
-tags: [opentelemetry, javascript-monitoring]
+date: 2022-06-26
+tags: [OpenTelemetry Instrumentation, JavaScript]
 authors: [ankit_anand, vishal]
 description: OpenTelemetry is a vendor-agnostic isntrumentation library. In this article, learn how to set up monitoring for a Nestjs application using OpenTelemetry.
 image: /img/blog/2021/12/monitor_nestjs_cover.webp
@@ -17,6 +17,9 @@ keywords:
   - nestjs instrumentation
   - signoz
 ---
+
+import { LiteYoutubeEmbed } from "react-lite-yt-embed";
+
 <head>
   <link rel="canonical" href="https://signoz.io/blog/opentelemetry-nestjs/"/>
 </head>
@@ -46,15 +49,15 @@ First, you need to install SigNoz. Data collected by OpenTelemetry will be sent 
 You can get started with SigNoz using just three commands at your terminal.
 
 ```jsx
-git clone https://github.com/SigNoz/signoz.git
+git clone -b main https://github.com/SigNoz/signoz.git
 cd signoz/deploy/
 ./install.sh
 ```
 For detailed instructions, you can visit our documentation.
 
-[![Deployment Docs](/img/blog/common/deploy_docker_documentation.webp)](https://signoz.io/docs/deployment/docker/?utm_source=blog&utm_medium=opentelemetry_nestjs)
+[![Deployment Docs](/img/blog/common/deploy_docker_documentation.webp)](https://signoz.io/docs/install/docker/?utm_source=blog&utm_medium=opentelemetry_nestjs)
 
-If you have installed SigNoz on your local host, you can access the UI at: [http://localhost:3000](http://localhost:3000/application)
+If you have installed SigNoz on your local host, you can access the UI at: [http://localhost:3301](http://localhost:3301/application)
 
 The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the SigNoz installation package.
 
@@ -77,37 +80,40 @@ For instrumenting a Nestjs application with OpenTelemetry, you need to install t
 npm install --save @opentelemetry/api
 npm install --save @opentelemetry/sdk-node
 npm install --save @opentelemetry/auto-instrumentations-node
-npm install --save @opentelemetry/exporter-trace-otlp-proto@0.27.0
+npm install --save @opentelemetry/exporter-trace-otlp-grpc
+npm install --save @grpc/grpc-js
 ```
 
 <br></br>
 
-2. **Create a `tracer.ts` file**<br></br>
+2. **Create a `tracer.ts` file**
+<br></br>
+
 The `IP of SIgNoz` will be localhost if you are running SigNoz on local.
    
 ```jsx
-// tracing.ts
-
 'use strict'
 
 const opentelemetry = require('@opentelemetry/sdk-node');
 const { getNodeAutoInstrumentations } = require('@opentelemetry/auto-instrumentations-node');
-const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-proto');
+const { OTLPTraceExporter } = require('@opentelemetry/exporter-trace-otlp-grpc');
 const { Resource } = require('@opentelemetry/resources');
 const { SemanticResourceAttributes } = require('@opentelemetry/semantic-conventions');
+const grpc = require('@grpc/grpc-js');
 
 // configure the SDK to export telemetry data to the console
 // enable all auto-instrumentations from the meta package
 const exporterOptions = {
-  url: 'http://<IP of SigNoz>:55681/v1/trace',
- }
+  url: 'http://localhost:4317',
+  credentials: grpc.credentials.createInsecure(),
+}
 const traceExporter = new OTLPTraceExporter(exporterOptions);
 const sdk = new opentelemetry.NodeSDK({
+  traceExporter,
+  instrumentations: [getNodeAutoInstrumentations()],
   resource: new Resource({
     [SemanticResourceAttributes.SERVICE_NAME]: 'sampleNestJsApp'
   }),
-  traceExporter,
-  instrumentations: [getNodeAutoInstrumentations()]
 });
 
 // initialize the SDK and register with the OpenTelemetry API
@@ -124,7 +130,7 @@ process.on('SIGTERM', () => {
     .finally(() => process.exit(0));
 });
 
-module.exports = sdk 
+module.exports = sdk
 ```
 
 <br></br>
@@ -216,9 +222,17 @@ OpenTelemetry makes it very convenient to instrument your Nestjs application. Yo
 You can try out SigNoz by visiting its GitHub repo 👇
 [![SigNoz GitHub repo](/img/blog/common/signoz_github.webp)](https://github.com/SigNoz/signoz)
 
-If you have any questions or need any help in setting things up, join our slack community and ping us in `#help` channel.
+If you are someone who understands more from video, then you can watch the below video tutorial on the same with SigNoz.
 
-[![SigNoz Slack community](/img/blog/common/join_slack_cta.png)](https://bit.ly/signoz-slack)
+<p>&nbsp;</p>
+
+<LiteYoutubeEmbed id="tpNDrJAjcto" mute={false} />
+
+<p>&nbsp;</p>
+
+If you have any questions or need any help in setting things up, join our slack community and ping us in `#support` channel.
+
+[![SigNoz Slack community](/img/blog/common/join_slack_cta.png)](https://signoz.io/slack)
 
 ---
 

@@ -2,7 +2,7 @@
 title: Using Jaeger for your microservices
 slug: jaeger-microservices
 date: 2021-09-22
-tags: [jaeger, distributed-tracing]
+tags: [Distributed Tracing, Jaeger]
 authors: ankit_anand
 description: Jaeger is a popular open-source tool used for distributed tracing in a microservice architecture. In a microservice architecture, a user request or transaction can travel across hundreds of services before serving what a user wants.
 image: /img/blog/2021/09/jaeger_microservices_cover-min.webp
@@ -43,6 +43,8 @@ import Screenshot from "@theme/Screenshot"
 />
 
 Distributed tracing gives you insight into how a particular service is performing as part of the whole in a distributed software system. There are two essential concepts involved in distributed tracing: **Spans** and **trace context**.
+
+[Read our complete guide on Distributed Tracing](http://signoz.io/distributed-tracing/)
 
 User requests are broken down into spans.
 
@@ -152,7 +154,7 @@ SigNoz is a full-stack open-source application performance monitoring and observ
 
 SigNoz can be used as a distributed tracing tool for a microservice architecture. 
 
-SigNoz also provides users flexibility in terms of data storage.You can choose between ClickHouse or Kafka + Druid as your backend storage while installing SigNoz. Both are industry-proven and highly scalable databases.
+It also provides a fast OLAP datastore, ClickHouse as the storage backend.
 
 <Screenshot
     alt="Architecture of SigNoz with OpenTelemetry and ClickHouse"

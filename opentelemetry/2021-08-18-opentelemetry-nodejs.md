@@ -28,14 +28,13 @@ OpenTelemetry can auto-instrument many common modules for a Javascript applicati
 
 <!--truncate-->
 
-import Screenshot from "@theme/Screenshot"
+<figure data-zoomable align='center'>
+    <img src="/img/blog/common/signoz_charts_application_metrics.png" alt="Monitor your Nodejs applications with SigNoz"/>
+</figure>
 
-<Screenshot
-  alt="Monitor your Nodejs applications with SigNoz"
-  height={500}
-  src="/img/blog/common/signoz_charts_application_metrics.png"
-  width={700}
-/>
+<br></br>
+
+
 OpenTelemetry is a set of tools, APIs, and SDKs used to instrument applications to create and manage telemetry data(Logs, metrics, and traces). For any distributed system based on microservice architecture, it's an operational challenge to solve performance issues quickly.
 
 Telemetry data helps engineering teams to troubleshoot issues across services and identify the root causes. In other words, telemetry data powers observability for your distributed applications.
@@ -51,7 +50,7 @@ Steps to get started with OpenTelemetry for a Nodejs application:
 You can get started with SigNoz using just three commands at your terminal.
 
 ```jsx
-git clone https://github.com/SigNoz/signoz.git
+git clone -b main https://github.com/SigNoz/signoz.git
 cd signoz/deploy/
 ./install.sh
 ```
@@ -59,9 +58,9 @@ cd signoz/deploy/
 
 For detailed instructions, you can visit our documentation.
 
-[![Deployment Docs](/img/blog/common/deploy_docker_documentation.webp)](https://signoz.io/docs/deployment/docker/?utm_source=blog&utm_medium=opentelemetry_nodejs)
+[![Deployment Docs](/img/blog/common/deploy_docker_documentation.webp)](https://signoz.io/docs/install/docker/?utm_source=blog&utm_medium=opentelemetry_nodejs)
 
-When you are done installing SigNoz, you can access the UI at: [http://localhost:3000](http://localhost:3000)
+When you are done installing SigNoz, you can access the UI at: [http://localhost:3301](http://localhost:3301)
 
 The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the SigNoz installation package.
 
@@ -238,7 +237,7 @@ Steps to get the app set up and running:
 
    You can check your application running at [http://localhost:9090/hello](http://localhost:9090/hello). You need to generate some load in order to see data reported on SigNoz dashboard. Refresh the endpoint for 10-20 times, and wait for 2-3 mins.
 
-And, congratulations! You have instrumented your sample Node.js app. You can now access the SigNoz dashboard at [http://localhost:3000](http://localhost:3000) to monitor your app for performance metrics.
+And, congratulations! You have instrumented your sample Node.js app. You can now access the SigNoz dashboard at [http://localhost:3301](http://localhost:3301) to monitor your app for performance metrics.
 
 <Screenshot
   alt="Sample nodejs app in the applications monitored"

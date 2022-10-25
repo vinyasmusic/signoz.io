@@ -2,7 +2,7 @@
 title: Set up application monitoring for your Node JS app in 20 mins with open source - SigNoz
 slug: nodejs-opensource-application-monitoring
 date: 2021-05-24
-tags: [nodejs, open-source]
+tags: [OpenTelemetry Instrumentation, JavaScript]
 authors: ankit_anand
 description: In this article, learn how to setup application monitoring for Node.js apps with our open-source solution, SigNoz.
 image: /img/blog/2021/05/nodejs_with_signoz_cover.webp
@@ -39,7 +39,7 @@ Let's divide this tutorial in 2 parts:
 You can get started with SigNoz using just three commands at your terminal.
 
 ```jsx
-git clone https://github.com/SigNoz/signoz.git
+git clone -b main https://github.com/SigNoz/signoz.git
 cd signoz/deploy/
 ./install.sh
 ```
@@ -47,9 +47,9 @@ cd signoz/deploy/
 
 For detailed instructions, you can visit our documentation.
 
-[![Deployment Docs](/img/blog/common/deploy_docker_documentation.webp)](https://signoz.io/docs/deployment/docker/?utm_source=blog&utm_medium=opentelemetry_nodejs)
+[![Deployment Docs](/img/blog/common/deploy_docker_documentation.webp)](https://signoz.io/docs/install/docker/?utm_source=blog&utm_medium=opentelemetry_nodejs)
 
-When you are done installing SigNoz, you can access the UI at: [http://localhost:3000](http://localhost:3000)
+When you are done installing SigNoz, you can access the UI at: [http://localhost:3301](http://localhost:3301)
 
 The application list shown in the dashboard is from a sample app called HOT R.O.D that comes bundled with the SigNoz installation package.
 
@@ -72,7 +72,7 @@ The application list shown in the dashboard is from a sample app called HOT R.O.
    From your terminal use the following command to clone SigNoz's GitHub repository.
 
    ```
-   git clone https://github.com/SigNoz/signoz.git
+   git clone -b main https://github.com/SigNoz/signoz.git
    ```
 
 3. **Update path to signoz/deploy and install SigNoz**<br></br>
@@ -85,7 +85,7 @@ The application list shown in the dashboard is from a sample app called HOT R.O.
 
    You will be asked to select one of the 2 ways to proceed:
 
-   1. Clickhouse as database (default)
+   1. ClickHouse as database (default)
    2. Kafka + Druid setup to handle scale (recommended for production use)
 
 Trying out SigNoz with clickhouse database takes less than 1.5GB of memory and for this tutorial, we will use that option.
@@ -97,7 +97,7 @@ You will get the following message once the installation is complete.
 ![Success message](/img/blog/2021/06/screenzy-1623086918860.webp)
 Note that this setup is just for demo/testing purposes and you need to proceed with Kafka + Druid set up option in case you want to set up SigNoz for use in production.
 
-Once `./install.sh` runs successfully, the UI should be accessible at port 3000. Wait for 2-3 mins for the data to be available to frontend.
+Once `./install.sh` runs successfully, the UI should be accessible at port 3301. Wait for 2-3 mins for the data to be available to frontend.
 
 ![SigNoz UI](/img/blog/2021/05/screenzy-1621624012520.webp)
 
@@ -231,7 +231,7 @@ But, it would be better if you follow these steps to understand what's happening
 
    You can check your application running at [http://localhost:9090/hello](http://localhost:9090/hello). You need to generate some load in order to see data reported on SigNoz dashboard. Refresh the endpoint for 10-20 times, and wait for 2-3 mins.
 
-And, congratulations! You have instrumented your sample Node.js app. You can now access the SigNoz dashboard at [http://localhost:3000](http://localhost:3000/) to monitor your app for performance metrics.
+And, congratulations! You have instrumented your sample Node.js app. You can now access the SigNoz dashboard at [http://localhost:3301](http://localhost:3301/) to monitor your app for performance metrics.
 
 import Screenshot from "@theme/Screenshot"
 
@@ -259,7 +259,7 @@ Here's a glimpse of how you can drill down and identify specific issues:
 
 If you need any help with trying out SigNoz, feel free to mail me at ankit.anand@signoz.io.
 
-Check out our [documentation](https://signoz.io/docs/deployment/docker) for more installation guides and troubleshooting instructions.
+Check out our [documentation](https://signoz.io/docs/install/docker) for more installation guides and troubleshooting instructions.
 
 They say, "If it's not monitored, then it's not in production." And with SigNoz you can start monitoring your Node.js applications now. Enabling your team to resolve issues quickly in production is critical to maintaining complex distributed systems in fine health.
 

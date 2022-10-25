@@ -2,7 +2,7 @@
 title: Top 9 observability tools in 2022 perfect for microservices
 slug: observability-tools
 date: 2022-01-10
-tags: [observability, application-monitoring]
+tags: [Tech Resources]
 authors: ankit_anand
 description: Latest top observability tools list - 1.SigNoz 2.Instana 3.Dynatrace 4.Grafana Labs 5.Honeycomb 6.Lightstep 7.New Relic 8.DataDog...
 image: /img/blog/2022/01/observability_tools_2022_cover.webp
@@ -36,9 +36,9 @@ A good observability tool has many components:
 
 3. It should have a good visualization layer for your teams to consume and take action.
 
-In this article, let's explore the top 9 observability tools in 2021 which can be perfect for your microservice application.
+In this article, let's explore the top 9 observability tools in 2022 which can be perfect for your microservice application.
 
-List of Top 9 observability tools in 2021
+List of Top 9 observability tools in 2022
 
 - SigNoz
 - Instana
@@ -50,9 +50,9 @@ List of Top 9 observability tools in 2021
 - Datadog
 - Splunk
 
-## Top observability tools in 2021
+## Top observability tools in 2022
 
-Now let's explore the top observability tools in 2021.
+Now let's explore the top observability tools in 2022.
 
 ### SigNoz
 
@@ -247,7 +247,7 @@ An open-source tool like [SigNoz](https://signoz.io/?utm_source=blog&utm_medium
 You can get started with SigNoz using just three commands at your terminal.
 
 ```jsx
-git clone https://github.com/SigNoz/signoz.git
+git clone -b main https://github.com/SigNoz/signoz.git
 cd signoz/deploy/
 ./install.sh
 ```
@@ -255,7 +255,7 @@ cd signoz/deploy/
 
 For detailed instructions, you can visit our documentation.
 
-[![Deployment Docs](/img/blog/common/deploy_docker_documentation.webp)](https://signoz.io/docs/deployment/docker/?utm_source=blog&utm_medium=observability_tools)
+[![Deployment Docs](/img/blog/common/deploy_docker_documentation.webp)](https://signoz.io/docs/install/docker/?utm_source=blog&utm_medium=observability_tools)
 
 You can check out SigNoz's GitHub repo here 👇
 

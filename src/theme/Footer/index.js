@@ -54,6 +54,7 @@ function NewsletterSignup() {
         setEmail("Some error occurred. Please try again.");
       });
   };
+
   return (
     <div>
       Signup to receive updates
