@@ -187,10 +187,7 @@ module.exports = {
         items: [
           'userguide/logs_query_builder',
           'userguide/logs_fields',
-          {
-            type: 'category',
-            label: 'Collecting Logs',
-            items: [
+         
               'userguide/collect_kubernetes_pod_logs',
               'userguide/collect_docker_logs',
               'userguide/collecting_syslogs',
@@ -203,9 +200,7 @@ module.exports = {
                   'userguide/collecting_application_logs_otel_sdk_python',
                   'userguide/collecting_application_logs_otel_sdk_java'
                 ]
-              }
-            ]
-          },
+              },
           {
             type: 'category',
             label: 'Existing Collectors to SigNoz',
@@ -240,30 +235,11 @@ module.exports = {
       type: 'doc',
       id: 'userguide/exceptions',
     },
-
-
-
-
-
     {
-      label: "Use SigNoz",
+      label: "Configuration",
       type: "category",
       items: [
-        'userguide/overview',
-        'userguide/send-metrics',
-        'userguide/navigate-user-interface',
-        'userguide/metrics',
-        {
-          type: 'category',
-          label: 'View Traces',
-          link: {
-            type: 'doc',
-            id: 'userguide/traces',
-          },
-          items: [
-            'userguide/span-details'
-          ]
-        },
+   //     'userguide/overview',
         'userguide/authentication',
         'userguide/retention-period',
       ],
