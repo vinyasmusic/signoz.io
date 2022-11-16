@@ -262,11 +262,16 @@ module.exports = {
         'tutorial/opentelemetry-operator-usage',
         'tutorial/opentelemetry-binary-usage-in-virtual-machine',
         'tutorial/setting-up-tls-for-signoz',
-        'tutorial/setting-up-sso-saml-with-keycloak'
+        'tutorial/setting-up-sso-saml-with-keycloak',
+        'tutorial/writing-clickhouse-queries-in-dashboard'
       ],
     },
     {
       id: "architecture",
+      type: "doc",
+    },
+    {
+      id: "production-readiness",
       type: "doc",
     },
     {
