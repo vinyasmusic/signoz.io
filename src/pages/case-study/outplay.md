@@ -50,6 +50,7 @@ When we started evaluating different solutions, one thing was clear that it has 
 ### Any specific use cases?
 
 During peak hours, the application can be slow. But the application was also taking time to load which was degrading the experience of our customers.
+
 Basically, we have to find which part of the application is taking time? Is it the back end or the database query? What kind of queries are slowing us down? These were the questions we wanted to figure out from an APM.
 
 ### What's the business impact of application being slow?
@@ -57,18 +58,18 @@ Outplay is used by salespeople who use it regularly to connect with their prospe
 
 ### How did SigNoz help?
 We migrated our entire workload from EC2 to Kubernetes, so that scaling would be easier. Then we started optimising the backend, that's when SigNoz helped us. We started getting a list of APIs and database call times which we started optimising. We are able to load more users now with the same infra and the backend response time is 35% faster. We handle peak load 3000 active concurrent connections currently.
+
 Generating traces for background services and DB calls to understand and improve their services. Also, track all the DB call traces from background workers to check for potential bottlenecks.
 We use traces in the dev and staging environment to find any performance issues. The QA team also uses APM tools in the staging environment to check if any APIs are taking a lot of time or finding any anomalies.
 
-### Can you talk about any specific use cases?
+### How did you leverage SigNoz to improve performance for your app?
 
-So our main requirements the performance tuning. So we had a lot of gaps on the performance. So the first thing was we had to analyze the application is behaving and how the DB is responding, what all things can be made to improvise the application.
+So, we wanted to analyze how the application is behaving and how the DB is responding, what all things can be made to improvise the application.
 
 
 First thing, we did was we collected the entire metrics. We took the top ten endpoints where the DB time was high, and using the APM tool, we pointed out the exact points or the exact stored procedures, where the processing time was high.
 
 The processing time was high, we started optimizing those queries. So we saw very good results where our platform is now able to handle twice the load.
-
 
 That was one of the major reason. A second thing was we wanted to make this as a complete process where we test most of our things on staging. We have a deployment of SigNoz on staging environment as well. So that we find the issues as early as possible before putting into production. Because if there is an issue on staging, it will be a bigger one in production.
 
