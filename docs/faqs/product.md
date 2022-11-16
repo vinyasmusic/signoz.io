@@ -40,7 +40,7 @@ We support PromQL and Prometheus remote read for users to shift seamlessly from 
 
 SigNoz supports all the exporters that are listed on the <a href="https://prometheus.io/docs/instrumenting/exporters/" rel="noopener noreferrer nofollow" target="_blank">Exporters and Integrations</a> page of the Prometheus documentation. If you have a running Prometheus instance and you expose metrics in Prometheus, then you can scrape them in SigNoz by [configuring Prometheus receivers](https://signoz.io/docs/userguide/send-metrics/#enable-a-prometheus-receiver).
 
-### I am using Jaeger, can I use SigNoz? How does it differ from Jager?
+### I am using Jaeger, can I use SigNoz? How does it differ from Jaeger?
 
 Yes, you can. SigNoz provides better distributed tracing capabilities than Jaeger. The traces tab of SigNoz provides advanced filtering based on different attributes. Moreover, you can also run aggregates on filtered traces. For example, you can get the p99 latency of spans with a tag of premium_customers.
 
@@ -82,7 +82,7 @@ SigNoz is full-stack open source APM and observability tool. Some key aspects th
 
 The last we checked Honeycomb (August 2022), they were primarily focused on traces and support for metrics in their pro plan.
 
-We do have support for metrics, traces and also logs. So you can get all the 3 signals in a single app. You get out of the box dashboards for services with metrics like latency, etc. We have good support for trace aggregates and filters based on trace attributes, with a trace detail page with attributes. You can check more details in [our docs](https://signoz.io/docs/userguide/overview/)
+We do have support for metrics, traces and also logs. So you can get all the 3 signals in a single app. You get out of the box dashboards for services with metrics like latency, etc. We have good support for trace aggregates and filters based on trace attributes, with a trace detail page with attributes. You can check more details in [our docs](https://signoz.io/docs/userguide/traces/)
 
 Though Honeycomb does have some features like Bubble up and correlation which we don't have currently, but we have some advanced correlation based features in our roadmap.
 
