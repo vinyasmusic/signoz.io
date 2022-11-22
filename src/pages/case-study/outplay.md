@@ -41,11 +41,8 @@ import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 ![Outplay Case Study](/img/case_study/outplay-banner.webp)
 
 ### What were the business problems you were trying to solve with SigNoz?
-Before introducing APM, we had blind spots. Our customers were seeing certain pages getting slow or having time outs sometimes. We didn’t have a great understanding of what was causing the slowness in application.
 
-I had previously worked with APM tools before, and hence I thought of introducing it here.
-
-When we started evaluating different solutions, one thing was clear that it has to be based on open telemetry because that is going to be the standard now. I can have any kind of collector, which gets the data and sends it to any backend. But the application will be configured with open telemetry which gives me more flexibility to use any other backend if needed without changing the application code.
+Before introducing APM, we had blind spots. Our customers were seeing certain pages getting slow or having time outs sometimes. We wanted to understand what was causing the slowness in application to ensure our customers weren't impacted.
 
 ### Any specific use cases?
 
@@ -54,7 +51,7 @@ During peak hours, the application can be slow. But the application was also tak
 Basically, we have to find which part of the application is taking time? Is it the back end or the database query? What kind of queries are slowing us down? These were the questions we wanted to figure out from an APM.
 
 ### What's the business impact of application being slow?
-Outplay is used by salespeople who use it regularly to connect with their prospects. Salespeople are always on the run and time is money. More efficient they are with their time, they can engage with more prospects, which directly impacts companies’ top line. If the tool is down, their productivity is completely lost. Outplay is also connected to multiple CRM in the background. So if sync pipelines in Outplay are not performing as expected, the changes they make are not reflected automatically in these CRMs.
+Outplay is used by salespeople to reach their prospects and close deals. Salespeople are always under pressure to hit their targets and time is money. The more efficient they are, the more they can engage with more prospects, and the more impact it has on the companies' top line. If the tool is down, their productivity is impacted. Outplay is also connected to multiple CRMs in the background. So if sync pipelines in Outplay are not performing as expected, the automatic data flow to the CRMs is also affected. 
 
 ### How did SigNoz help?
 We migrated our entire workload from EC2 to Kubernetes, so that scaling would be easier. Then we started optimising the backend, that's when SigNoz helped us. We started getting a list of APIs and database call times which we started optimising. We are able to load more users now with the same infra and the backend response time is 35% faster. We handle peak load 3000 active concurrent connections currently.
