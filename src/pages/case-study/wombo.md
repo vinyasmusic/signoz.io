@@ -1,7 +1,7 @@
 ---
 title:  How Generative AI co Wombo provides great experience to its 5mn MAU using SigNoz for Observability
 slug: wombo
-image: /img/case_study/wombo-banner.png
+image: /img/case_study/wombo-banner.webp
 authors: [pranay]
 hide_table_of_contents: true
 
@@ -12,8 +12,8 @@ import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 
 <head>
   <link rel="canonical" href="https://signoz.io/case-study/wombo/"/>
-  <meta property="og:image" content="https://signoz.io/img/case_study/wombo-banner.png"/>
-  <meta name ="twitter:image" content="https://signoz.io/img/case_study/wombo-banner.png"/>
+  <meta property="og:image" content="https://signoz.io/img/case_study/wombo-banner.webp"/>
+  <meta name ="twitter:image" content="https://signoz.io/img/case_study/wombo-banner.webp"/>
 </head>
 
 <div class="avatar">
@@ -42,7 +42,7 @@ import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 
 
 
-![Wombo Case Study](/img/case_study/wombo-banner.png)
+![Wombo Case Study](/img/case_study/wombo-banner.webp)
 
 ### *Can you share about what does Wombo do? What are your key products?*
 
