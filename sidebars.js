@@ -83,6 +83,7 @@ module.exports = {
             'operate/clickhouse/connect-to-clickhouse'
           ]
         },
+        'operate/feature-flags',
       ],
     },
     {
@@ -167,6 +168,11 @@ module.exports = {
           'instrumentation/rust',
         ],
       },
+      {type: 'doc',
+      id:'application-monitoring/api-monitoring',
+      label: 'API Monitoring',
+      },
+      
       'instrumentation/troubleshoot-instrumentation',
     ],
     },
@@ -233,6 +239,10 @@ module.exports = {
     },
     {
       type: 'doc',
+      id: 'monitor-http-endpoints',
+    },
+    {
+      type: 'doc',
       id: 'userguide/exceptions',
     },
     {
@@ -241,6 +251,7 @@ module.exports = {
       items: [
    //     'userguide/overview',
         'userguide/authentication',
+        'userguide/sso-authentication',
         'userguide/retention-period',
       ],
     },
