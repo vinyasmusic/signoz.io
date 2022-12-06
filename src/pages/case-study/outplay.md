@@ -42,16 +42,16 @@ import { LiteYoutubeEmbed } from "react-lite-yt-embed";
 
 ### What were the business problems you were trying to solve with SigNoz?
 
-Before introducing APM, we had blind spots. Our customers were seeing certain pages getting slow or having time outs sometimes. We wanted to understand what was causing the slowness in application to ensure our customers weren't impacted.
+Main area of focus was to have APM metrics on the application to understand the performance and bottlenecks for optimisation. Signoz provided us the capabilities along with monitoring of API to get alerted in case API failures.
 
 ### Any specific use cases?
 
-During peak hours, the application can be slow. But the application was also taking time to load which was degrading the experience of our customers.
+Basically, we had to find the application API whose performance needs to be optimised? Is it the back end or the database query? What kind of queries which needs tuning? 
 
-Basically, we have to find which part of the application is taking time? Is it the back end or the database query? What kind of queries are slowing us down? These were the questions we wanted to figure out from an APM.
+These were the questions we wanted to figure out from an APM.
 
-### What's the business impact of application being slow?
-Outplay is used by salespeople to reach their prospects and close deals. Salespeople are always under pressure to hit their targets and time is money. The more efficient they are, the more they can engage with more prospects, and the more impact it has on the companies' top line. If the tool is down, their productivity is impacted. Outplay is also connected to multiple CRMs in the background. So if sync pipelines in Outplay are not performing as expected, the automatic data flow to the CRMs is also affected. 
+### What's the business impact?
+Outplay is used by salespeople to reach their prospects and close deals. Salespeople are always under pressure to hit their targets and time is money. The more efficient they are, the more they can engage with more prospects. If the application is down, their productivity is impacted and since Outplay also supports multiple CRMs integrations, automatic data flow would also be impacted.
 
 ### How did SigNoz help?
 We migrated our entire workload from EC2 to Kubernetes, so that scaling would be easier. Then we started optimising the backend, that's when SigNoz helped us. We started getting a list of APIs and database call times which we started optimising. We are able to load more users now with the same infra and the backend response time is 35% faster. We handle peak load 3000 active concurrent connections currently.
@@ -61,12 +61,11 @@ We use traces in the dev and staging environment to find any performance issues.
 
 ### How did you leverage SigNoz to improve performance for your app?
 
-So, we wanted to analyze how the application is behaving and how the DB is responding, what all things can be made to improvise the application.
+So, we wanted to analyze application metrics and how the DB is performing, what all things can be made to improvise the application.
 
+First thing, we did was we collected the entire metrics. We took the top ten endpoints where the DB tuning was needed, and using the APM tool, we pointed out the exact points or the exact stored procedures, which needs to be optimized.
 
-First thing, we did was we collected the entire metrics. We took the top ten endpoints where the DB time was high, and using the APM tool, we pointed out the exact points or the exact stored procedures, where the processing time was high.
-
-The processing time was high, we started optimizing those queries. So we saw very good results where our platform is now able to handle twice the load.
+Optimisation and DB tuning gave very good results to our platform and is now able to handle higher loads.
 
 That was one of the major reason. A second thing was we wanted to make this as a complete process where we test most of our things on staging. We have a deployment of SigNoz on staging environment as well. So that we find the issues as early as possible before putting into production. Because if there is an issue on staging, it will be a bigger one in production.
 
