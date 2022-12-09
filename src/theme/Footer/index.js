@@ -100,12 +100,13 @@ function Footer() {
       })}
     >
       <div
-        style={{ display: "flex", justifyContent: "space-between" }}
+        style={{ display: "flex", justifyContent: "center" }}
         className={"footer-container"}
       >
         <div style={{ display: "block" }} className={"footer-yc-logo"}>
           <div style={{ display: "flex", alignItems: "center" }}>
             <img src={"/img/yc-logo.png"} alt={"Y Combinator"} />
+
           </div>
           <div
             style={{
@@ -156,6 +157,7 @@ function Footer() {
         )}
 
         {/* <NewsletterSignup /> */}
+
         <SignUpFormReact />
       </div>
       {copyright && (

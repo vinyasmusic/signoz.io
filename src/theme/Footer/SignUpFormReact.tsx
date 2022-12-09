@@ -154,7 +154,7 @@ export default function SignUpFormReact() {
               flexDirection: isInline ? "row" : "column",
               alignItems: "left",
               justifyContent: "left",
-              width: "30%",
+              // width: "100%",
             }}
           >
             <h4>Subscribe to our newsletter</h4>
