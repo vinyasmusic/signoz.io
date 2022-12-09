@@ -10,6 +10,7 @@ import Link from "@docusaurus/Link";
 import { useThemeConfig } from "@docusaurus/theme-common";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import { isValidEmail } from "./isValidEmail";
+import SignUpFormReact from "./SignUpFormReact";
 
 function FooterLink({ to, href, label, prependBaseUrlToHref, ...props }) {
   const toUrl = useBaseUrl(to);
@@ -154,7 +155,8 @@ function Footer() {
           </div>
         )}
 
-        <NewsletterSignup />
+        {/* <NewsletterSignup /> */}
+        <SignUpFormReact />
       </div>
       {copyright && (
         <div
