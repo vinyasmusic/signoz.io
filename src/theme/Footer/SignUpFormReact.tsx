@@ -138,12 +138,16 @@ export default function SignUpFormReact() {
       );
     case ERROR:
       return (
-        <>
+        <div style={{display:'flex', flexDirection:'column'}}>
+          
           <SignUpFormError />
           <BackButton />
-        </>
+        </div>
       );
+
     default:
+      // const isError=formState==ERROR;
+
       return (
         <>
          
@@ -181,6 +185,12 @@ export default function SignUpFormReact() {
                 padding: "8px 12px",
               }}
             />
+            {/* {isError && (
+              <>
+              <SignUpFormError />
+              <BackButton />
+              </>
+            )} */}
             <SignUpFormButton />
           </form>
         </>
@@ -193,7 +203,7 @@ export default function SignUpFormReact() {
         style={{
           alignItems: "centre",
           justifyContent: "centre",
-          width: "10%",
+          // width: "100%",
         }}
       >
         <p
