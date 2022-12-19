@@ -48,13 +48,13 @@ export default function CodeBlock({
   const {highlightLines, code} = parseLines(content, metastring, language);
 
   const handleCopyCode = () => {
-    if (window.ga) {
-      window.ga("send", "event", {
+    if (window.gtag) {
+      window.gtag("event", "copy", {
         eventCategory: "Code Block",
         eventAction: "copy",
         eventLabel: language,
-        transport: "beacon",
         url: window.location.href,
+        code,
       });
     }
     copy(code);
