@@ -50,9 +50,10 @@ export default function CodeBlock({
 
   const handleCopyCode = () => {
     ReactGA.event({
-      category: "CodeBlock",
-      action: "Copy code",
-      label: window.location.href,
+      category: "Code Block",
+      action: "copy",
+      label: language,
+      value: window.location.href,
     });
     copy(code);
     setShowCopied(true);
