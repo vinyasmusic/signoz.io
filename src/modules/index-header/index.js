@@ -18,14 +18,13 @@ export const Header = () => {
     <div className="container" style={{textAlign:'center'}}>
 
         
-        <p className="" style={{ fontWeight: "bold", fontSize: "32px" }}>
-        Open Source Metrics, Traces and Logs in a single pane
-            {/* Open-source application monitoring platform */}
+        <p className="" style={{ fontWeight: "bold", fontSize: "42px" }}>
+            Self Hosted observability with 
+            traces, <br></br> logs and metrics in a single pane            {/* Open-source application monitoring platform */}
         </p>
 
         <p className="hero__subtitle">
-            Understand issues in your deployed applications & solve them
-            quickly
+        With our open source platform, customer data never has to leave your infrastructure
         </p>
 
         <div style={{ margin: "1rem 0" }}>

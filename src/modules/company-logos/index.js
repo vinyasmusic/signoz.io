@@ -16,21 +16,21 @@ return(
               <p className={styles.tagline}> Used by teams at </p>
               <ul>
                 <li>
-                  <img src="img/users/phenom.png" alt="phenom logo" />
+                  <img src="img/users/wonder_logo.png" alt="wonder logo" />
                 </li>
                 <li>
                   <img src="img/users/epifi.jpeg" alt="epifi logo" />
                 </li>
                 <li>
-                  <img src="img/users/Outplay.webp" alt="outplay logo" />
+                  <img src="img/users/outplay_logo.png" alt="outplay logo" />
                 </li>
                 <li>
-                  <img src="img/users/instasafe-cropped.png" alt="instasafe logo" />
+                  <img src="img/users/instasafe_logo.png" alt="instasafe logo" />
                 </li>
                 <li>
                   <img
-                    src="img/users/turvo-logo-white.png"
-                    alt="turvo logo"
+                    src="img/users/wombo_logo.png"
+                    alt="wombo logo"
                   />
                 </li>
               </ul>
