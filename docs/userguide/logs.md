@@ -126,6 +126,7 @@ The receivers FluentForward and OTLP doesn’t have operators. But for parsing t
 - **[remove](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/operators/remove.md)** :-  The `remove` operator removes a field from a record.
 - **[retain](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/operators/retain.md)** :- The `retain` operator keeps the specified list of fields, and removes the rest.
 - **[router](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/operators/router.md)** :-  The `router` operator allows logs to be routed dynamically based on their content.
+- **[key_value_parser](https://github.com/open-telemetry/opentelemetry-collector-contrib/blob/main/pkg/stanza/docs/operators/key_value_parser.md)** :- The `key_value_parser` operator parses the string-type field selected by parse_from into key value pairs. All values are of type string.
     
     The operator is configured with a list of routes, where each route has an associated expression. An entry sent to the router operator is forwarded to the first route in the list whose associated expression returns `true`.
     
