@@ -45,6 +45,12 @@ function pricingTest() {
 
                             <li>Dashboard for Infrastructure and custom metrics</li>
 
+                            <li>Alerts</li>
+
+                            <li> 
+                              Exceptions Monitoring 
+                            </li>
+
                             <li>Community Support</li>
                         </p>
                     </div>
@@ -80,16 +86,19 @@ function pricingTest() {
                             <br></br>
                             <b>Pricing</b>
                             <br></br>
-                            Logs & Traces : USD 0.4/GB
+                            Logs & Traces : $0.4 per GB ingested
                             <br></br>
-                            Metrics : USD 0.1/mn samples
+                            Metrics : $0.1 per mn samples
                             <br></br>
                             <br></br>
 
                             <div style={{fontSize:'medium'}}>
                             Retention: 15 days for Traces & Logs, 30 days for Metrics
                             <br></br>
-                            Custom Retention available
+                            No user based pricing
+                            <br></br>
+
+                            Custom Retention periods available
                             </div>
 
 
