@@ -28,7 +28,7 @@ function pricingTest() {
 
         <div className={"row"}>
             <div className={"col col--4 margin-vert--md"}>
-                <div class="card" style={{height:'28rem'}}>
+                <div class="card" style={{height:'30rem'}}>
                     <div class="card__header">
                         <h3 style={{marginBottom:'0'}}>Community</h3>
                         <p style={{fontSize:'medium'}}>Free</p>
@@ -67,7 +67,7 @@ function pricingTest() {
                 </div>
             </div>
             <div className={"col col--4 margin-vert--md"}>
-                <div class="card" style={{height:'28rem'}}>
+                <div class="card" style={{height:'30rem'}}>
                     <div class="card__header">
                         <h3 style={{marginBottom:'0'}}>SigNoz Cloud</h3>
                         <p style={{fontSize:'medium'}}>Starts from USD 200/month</p>
@@ -116,7 +116,7 @@ function pricingTest() {
                 </div>
             </div>
             <div className={"col col--4 margin-vert--md"}>
-                <div class="card" style={{height:'28rem'}}>
+                <div class="card" style={{height:'30rem'}}>
                     <div class="card__header">
                         <h3 style={{marginBottom:'0'}}>Enterprise </h3>
                         {/* <p style={{fontSize:'medium'}}>Open for Early access</p> */}
