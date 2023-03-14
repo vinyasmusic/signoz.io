@@ -86,18 +86,17 @@ export const SigNozFeatures = () => {
             />
         </div>
         <div className="col col--6">
-            <h3>Distributed Tracing</h3>
+            <h3>Metrics Monitoring</h3>
             <ul>
-                <li> End-to-end visibility of your services with rich contextual tags and attributes </li>
-                <li> Run advanced aggregates on trace data toget business relevant metrics </li>
-                <li> Powerful filters to drive insights faster </li>
-                <li> Flamegraphs and Gantt Charts to visualize flow of requests easily </li>
+                <li> Out-of-box charts for application metrics like p90, p99 latency, error rates, request rates, etc. </li>
+                <li> Custom & Business Metrics </li>
+                <li> A powerful metrics query builder to create customized charts </li>
+                <li> OpenTelemetry Metrics SDK support </li>
             </ul>
 
         </div>
 
         </div>
-
         </TabItem>
 
         <TabItem value="infra">
@@ -110,12 +109,12 @@ export const SigNozFeatures = () => {
             />
         </div>
         <div className="col col--6">
-            <h3>Distributed Tracing</h3>
+            <h3>Infrastructure Monitoring</h3>
             <ul>
-                <li> End-to-end visibility of your services with rich contextual tags and attributes </li>
-                <li> Run advanced aggregates on trace data toget business relevant metrics </li>
-                <li> Powerful filters to drive insights faster </li>
-                <li> Flamegraphs and Gantt Charts to visualize flow of requests easily </li>
+                <li> End-to-End visibility into infrastructure performance </li>
+                <li> Ingest metrics from all kinds of host environments </li>
+                <li> Correlate infrastructure and application metrics for contextual insights </li>
+                <li> Build customized dashboards with powerful query builder </li>
             </ul>
 
         </div>
@@ -134,12 +133,12 @@ export const SigNozFeatures = () => {
             />
         </div>
         <div className="col col--6">
-            <h3>Distributed Tracing</h3>
+            <h3>Exceptions Monitoring</h3>
             <ul>
-                <li> End-to-end visibility of your services with rich contextual tags and attributes </li>
-                <li> Run advanced aggregates on trace data toget business relevant metrics </li>
-                <li> Powerful filters to drive insights faster </li>
-                <li> Flamegraphs and Gantt Charts to visualize flow of requests easily </li>
+                <li> Record exceptions automatically in Python, Java, Ruby, and Javascript </li>
+                <li> Rich contextual data with stack trace, exceptions attributes and linked span data </li>
+                <li> Exceptions grouping and custom exceptions </li>
+                <li> Navigate from Exceptions to related traces to observe the exception in trace execution context </li>
             </ul>
 
         </div>
@@ -149,8 +148,24 @@ export const SigNozFeatures = () => {
         </TabItem>
 
         <TabItem value="alerts">
-            
-            
+
+        <div className="row">
+        <div className="col col--6">
+        <img
+                    src={"img/trace-detail.webp"}
+                    alt="SigNoz screenshot"
+        />
+        </div>
+        
+        <div className="col col--6">
+            <h3>Alerts Management</h3>
+            <ul>
+                <li> Easy to set alerts with DIY query builder </li>
+                <li> Support for PromQL for users familiar with Prometheus alert manager </li>
+                <li> Support for multiple notification channels like Slack and PagerDuty </li>
+            </ul>
+        </div>
+        </div>
         </TabItem>
 
         </Tabs>
