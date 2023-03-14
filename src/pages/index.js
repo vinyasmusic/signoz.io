@@ -4,6 +4,7 @@ import ReactModal from "react-modal";
 import { Header } from "../modules/index-header"
 import { ShowCompanyLogos } from "../modules/company-logos"
 import { WhyOpenTelemetry } from "../modules/why-opentelemetry";
+import { SigNozFeatures } from "../modules/index-features";
 
 import clsx from "clsx";
 import Layout from "@theme/Layout";
@@ -307,6 +308,8 @@ function Home() {
               </div>
             </section>
           )}
+
+          <SigNozFeatures />
 
           <section>
             <div
