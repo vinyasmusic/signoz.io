@@ -3,6 +3,7 @@ import ReactModal from "react-modal";
 
 import { Header } from "../modules/index-header"
 import { ShowCompanyLogos } from "../modules/company-logos"
+import { WhyOpenTelemetry } from "../modules/why-opentelemetry";
 
 import clsx from "clsx";
 import Layout from "@theme/Layout";
@@ -289,6 +290,7 @@ function Home() {
           {/* <SubscribeNearFold /> */}
           <ShowCompanyLogos />
 
+
           {features && features.length > 0 && (
             <section className={styles.features}>
               <div
@@ -323,6 +325,9 @@ function Home() {
           </section>
 
           <WhySigNoz />
+
+          <WhyOpenTelemetry />
+
 
           <section>
             <div
