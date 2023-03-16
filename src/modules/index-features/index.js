@@ -10,34 +10,34 @@ export const SigNozFeatures = () => {
         <section>
         <div
           className="container"
-          style={{ marginTop: "6rem", marginBottom: "3rem" }}
+          style={{ marginTop: "3rem", marginBottom: "3rem" }}
         >
-        <h1 class="text--center margin-vert--sm">
-        A full-stack OpenTelemetry-Native APM for all your Observability needs
+        <h1 class="text--center margin-bottom--lg">
+        <span className={styles.highlight}>Metrics, Traces, Logs</span> and <span className={styles.highlight}>Exceptions</span> monitoring in a single pane 
         </h1>
 
-        <Tabs
+        <Tabs className={styles.tabstyling}
         defaultValue="traces"
         values={[
-            {label: 'Tracing', value: 'traces'},
-            {label: 'Logs ', value: 'logs'},
-            {label: 'Metrics ', value: 'metrics'},
+            {label: 'Distributed Tracing', value: 'traces'},
+            {label: 'Logs Management ', value: 'logs'},
+            {label: 'Metrics & Dashboards ', value: 'metrics'},
 
-            {label: 'Infrastructure ', value: 'infra'},
+            {label: 'Infrastructure Monitoring', value: 'infra'},
             {label: 'Exceptions ', value: 'exceptions'},
             {label: 'Alerts ', value: 'alerts'},
         ]}>
 
-        <TabItem value="traces">
+        <TabItem className={styles.tabstyling} value="traces">
             
         <div className="row">
-        <div className="col col--6">
+        <div className="col col--8">
             <img
-                    src={"img/trace-detail.webp"}
-                    alt="SigNoz screenshot"
+                    src={"img/website/tracing.png"}
+                    alt="Distributed Tracing"
             />
         </div>
-        <div className="col col--6">
+        <div className="col col--4">
             <h3>Distributed Tracing</h3>
             <ul>
                 <li> End-to-end visibility of your services with rich contextual tags and attributes </li>
@@ -52,16 +52,16 @@ export const SigNozFeatures = () => {
 
         </TabItem>
 
-        <TabItem value="logs">
+        <TabItem className={styles.tabstyling} value="logs">
 
         <div className="row">
-        <div className="col col--6">
+        <div className="col col--8">
             <img
-                    src={"img/advanced-trace-filtering.webp"}
-                    alt="SigNoz screenshot"
+                    src={"img/website/logs.png"}
+                    alt="Logs Management"
             />
         </div>
-        <div className="col col--6">
+        <div className="col col--4">
             <h3>Logs Management</h3>
             <ul>
                 <li> Native Support for OpenTelemetry Logs </li>
@@ -76,16 +76,16 @@ export const SigNozFeatures = () => {
 
         </TabItem>
 
-        <TabItem value="metrics">
+        <TabItem className={styles.tabstyling} value="metrics">
 
         <div className="row">
-        <div className="col col--6">
+        <div className="col col--8">
             <img
-                    src={"img/trace-detail.webp"}
-                    alt="SigNoz screenshot"
+                    src={"img/website/metrics.png"}
+                    alt="Metrics Monitoring"
             />
         </div>
-        <div className="col col--6">
+        <div className="col col--4">
             <h3>Metrics Monitoring</h3>
             <ul>
                 <li> Out-of-box charts for application metrics like p90, p99 latency, error rates, request rates, etc. </li>
@@ -99,16 +99,16 @@ export const SigNozFeatures = () => {
         </div>
         </TabItem>
 
-        <TabItem value="infra">
+        <TabItem className={styles.tabstyling} value="infra">
 
         <div className="row">
-        <div className="col col--6">
+        <div className="col col--8">
             <img
-                    src={"img/trace-detail.webp"}
-                    alt="SigNoz screenshot"
+                    src={"img/website/infrastructure.png"}
+                    alt="Infrastructure Monitoring"
             />
         </div>
-        <div className="col col--6">
+        <div className="col col--4">
             <h3>Infrastructure Monitoring</h3>
             <ul>
                 <li> End-to-End visibility into infrastructure performance </li>
@@ -123,16 +123,16 @@ export const SigNozFeatures = () => {
 
         </TabItem>
 
-        <TabItem value="exceptions">
+        <TabItem className={styles.tabstyling} value="exceptions">
 
         <div className="row">
-        <div className="col col--6">
+        <div className="col col--8">
             <img
-                    src={"img/trace-detail.webp"}
-                    alt="SigNoz screenshot"
+                    src={"img/website/exceptions.png"}
+                    alt="Exceptions Monitoring"
             />
         </div>
-        <div className="col col--6">
+        <div className="col col--4">
             <h3>Exceptions Monitoring</h3>
             <ul>
                 <li> Record exceptions automatically in Python, Java, Ruby, and Javascript </li>
@@ -147,17 +147,17 @@ export const SigNozFeatures = () => {
 
         </TabItem>
 
-        <TabItem value="alerts">
+        <TabItem className={styles.tabstyling}  value="alerts">
 
         <div className="row">
-        <div className="col col--6">
+        <div className="col col--8">
         <img
-                    src={"img/trace-detail.webp"}
-                    alt="SigNoz screenshot"
+                    src={"img/website/alerts.png"}
+                    alt="Alerts Management"
         />
         </div>
         
-        <div className="col col--6">
+        <div className="col col--4">
             <h3>Alerts Management</h3>
             <ul>
                 <li> Easy to set alerts with DIY query builder </li>

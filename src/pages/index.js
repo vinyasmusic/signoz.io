@@ -311,13 +311,14 @@ function Home() {
 
           <SigNozFeatures />
 
+{/*
           <section>
             <div
               className="container"
               style={{ marginTop: "2rem", marginBottom: "2rem" }}
             >
               {/* <p className="hero__title ">Single pane for complete metrics and traces, no need to shift to different systems</p> */}
-              <h1 class="text--center">
+ {/*}             <h1 class="text--center">
                 Single pane for metrics, traces and logs. No need to shift to
                 different systems{" "}
               </h1>
@@ -326,8 +327,9 @@ function Home() {
               </p>
             </div>
           </section>
+*/}
 
-          <WhySigNoz />
+          {/* <WhySigNoz /> */}
 
           <WhyOpenTelemetry />
 
