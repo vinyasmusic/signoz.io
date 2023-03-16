@@ -33,7 +33,7 @@ export const SigNozFeatures = () => {
         <div className="row">
         <div className="col col--8">
             <img
-                    src={"img/website/tracing.png"}
+                    src={"img/website/traces.png"}
                     alt="Distributed Tracing"
             />
         </div>
