@@ -165,6 +165,13 @@ To enable a Prometheus receiver, follow the steps below:
           timeout: 10s
       # This file was truncated for brevity.
       ```
+
+    :::info
+    To correctly scrape from prometheus instance running on the host machine, replace
+    `localhost:8080` with `172.17.0.1:8080` for Linux and `host.docker.internal:8080`
+    for MacOS.
+    :::
+
     Note that all the jobs are scraped in parallel, and all targets inside a job are
     scraped serially. For more details about configuring jobs and targets, see the
     following sections of the Prometheus documentation:
@@ -183,19 +190,19 @@ You can follow the below steps:
 1. [Install ClickHouse client][7]
 
 2. Connect to the ClickHouse container
-  ````
+  ```bash
   docker exec -it clickhouse-setup_clickhouse_1 bash
-  ````
-3. Run the clickhouse-client command to connect to the database service
-  ````
-  clickhouse client --host <SigNoz IP>  --port 9000
-  ````
-4. Run the query to list metrics
-  ````
-  select DISTINCT(JSONExtractString(time_series.labels,'__name__')) as metrics from signoz_metrics.time_series
-  ````
-5. If needed, dump in a csv file and parse it locally
   ```
+3. Run the clickhouse-client command to connect to the database service
+  ```bash
+  clickhouse client --host <SigNoz IP>  --port 9000
+  ```
+4. Run the query to list metrics
+  ```SQL
+  select DISTINCT(JSONExtractString(time_series.labels,'__name__')) as metrics from signoz_metrics.time_series
+  ```
+5. If needed, dump in a csv file and parse it locally
+  ```SQL
   select DISTINCT(labels) from signoz_metrics.time_series INTO OUTFILE 'output.csv' 
   ```
 
