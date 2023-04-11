@@ -137,6 +137,7 @@ function pricingTest() {
                       <li>Service Dependency Visualization</li>
                       <li>Run aggregates on ingested spans</li>
                       <li>Live Tail Logging</li>
+                  
                     </ul>
                     {/* <span>
                       <a href="#" className="explore">
@@ -272,6 +273,7 @@ function pricingTest() {
                     <ul className="list-icon-right">
                       <li>Single Sign On</li>
                       <li>SAML and LDAP support</li>
+                      <li>API Key Management</li>
                       <li>AWS Private Link</li>
                       <li>VPC Peering</li>
                     </ul>
