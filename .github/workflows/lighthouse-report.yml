@@ -10,19 +10,20 @@ jobs:
     name: Lighthouse Report
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Wait for the Netlify Preview
-        uses: jakepartusch/wait-for-netlify-action@v1
+        uses: jakepartusch/wait-for-netlify-action@v1.4
         id: netlify
         with:
-          site_name: frosty-austin-928e43
+          site_name: superb-khapse-cd916f
           max_timeout: 600
+          
       - name: Audit URLs using Lighthouse
         id: lighthouse_audit
-        uses: treosh/lighthouse-ci-action@v3
+        uses: treosh/lighthouse-ci-action@v10
         with:
           urls: |
-            https://deploy-preview-$PR_NUMBER--frosty-austin-928e43.netlify.app
+            https://deploy-preview-$PR_NUMBER--superb-khapse-cd916f.netlify.app
           uploadArtifacts: true
           temporaryPublicStorage: true
         env:
