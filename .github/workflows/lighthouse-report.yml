@@ -4,12 +4,14 @@ on:
   pull_request_target:
     branches:
       - main
+permissions: 
+  pull-requests: write 
 
 jobs:
   lighthouse-report:
     name: Lighthouse Report
     runs-on: ubuntu-latest
-    permissions: pull-requests: write 
+    
     steps:
 
       - uses: actions/checkout@v3
