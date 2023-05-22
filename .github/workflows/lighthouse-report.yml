@@ -4,8 +4,8 @@ on:
   pull_request_target:
     branches:
       - main
-permissions: 
-  pull-requests: write 
+permissions: write-all
+
 
 jobs:
   lighthouse-report:
