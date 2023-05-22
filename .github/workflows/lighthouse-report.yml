@@ -5,16 +5,19 @@ on:
     branches:
       - main
 
+permissions:
+  pull-requests: write
+
+
 jobs:
   lighthouse-report:
     name: Lighthouse Report
     runs-on: ubuntu-latest
+    
     steps:
 
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'
+      
       - name: Wait for the Netlify Preview
         uses: jakepartusch/wait-for-netlify-action@v1.4
         id: netlify
@@ -61,9 +64,10 @@ jobs:
             ].join('\n')
              core.setOutput("comment", comment);
 
+      
       - name: Add Lighthouse stats as comment
         id: comment_to_pr
-        uses: marocchino/sticky-pull-request-comment@v2.0.0
+        uses: marocchino/sticky-pull-request-comment@v2.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           number: ${{ github.event.pull_request.number }}
