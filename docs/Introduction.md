@@ -27,14 +27,14 @@ Then, SigNoz aggregates all the collected data, and you use the dashboard to see
 
 ### Architecture
 
-![acrhitecture-diagram-clickhouse](../static/img/architecture-signoz-clickhouse.svg)
+![architecture-diagram-clickhouse](../static/img/architecture-signoz-clickhouse.svg)
 SigNoz includes the following components:
 - **OpenTelemetry Collector**: Collects telemetry data from your services and applications.
 - **ClickHouse**: An open-source, high performance columnar OLAP database management system. 
 - **Query Service**: The interface between the front-end and ClickHouse
 - **Frontend**: The user interface, built in ReactJS and TypeScript.
 
-To learn more about the architecture of SigNoz, see the [Architecture](/docs/architecture) page.
+To learn more about the architecture of SigNoz, see the [Architecture](/docs/architecture.md) page.
 
 ## Get Started
 

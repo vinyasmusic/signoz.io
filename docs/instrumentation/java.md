@@ -40,7 +40,7 @@ A completely automatic and out of box experience, with minimal code changes. For
 :::
 
 - **Manual Instrumentation**<br></br>
-It involves writing instrumentation using OpenTelemetry SDK and API manually. You would need to get a handle to an instance of the `OpenTelemetry` interface, acquire a tracer, and create spans manually. Manual isntrumentation might also be used along with auto instrumentation.
+It involves writing instrumentation using OpenTelemetry SDK and API manually. You would need to get a handle to an instance of the `OpenTelemetry` interface, acquire a tracer, and create spans manually. Manual instrumentation might also be used along with auto instrumentation.
 
 Let’s understand how to download, install, and run OpenTelemetry in Java.
 
