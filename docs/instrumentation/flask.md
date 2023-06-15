@@ -150,7 +150,7 @@ You can check the supported versions [here](https://github.com/open-telemetry/op
 
 ### MySQL Database Instrumentation
 
-You can use  `opentelemetry-distro` to initialize instrumentation for your MySQL database calls. You need to ensure that the version of your DB client library is supported by OpenTelemetry. For MySQL, we have two isntrumentation libraries:
+You can use  `opentelemetry-distro` to initialize instrumentation for your MySQL database calls. You need to ensure that the version of your DB client library is supported by OpenTelemetry. For MySQL, we have two instrumentation libraries:
 
 - opentelemetry-instrumentation-mysql
 - opentelemetry-instrumentation-pymysql
